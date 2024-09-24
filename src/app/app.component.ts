@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -26,4 +26,7 @@ import { CustomSidenavComponent } from "./custom-sidenav/custom-sidenav.componen
 })
 export class AppComponent {
   title = 'CODER';
-  }
+  collapsed = signal(false);
+
+  sideNavWidth = computed( () => this.collapsed() ? '65px' : '250px');
+}
