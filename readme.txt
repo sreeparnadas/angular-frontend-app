@@ -22,3 +22,21 @@ mat-icons
 https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/
 
 Q) Custom-side-nav guide Ref: [https://www.youtube.com/watch?v=cz3pQQ5owd0&t=44s, https://www.youtube.com/watch?v=Sq5tdKKBz7Q]
+
+
+Q) How to resolve cors issue?
+
+https://stackoverflow.com/a/53183927
+https://expressjs.com/en/resources/middleware/cors.html
+
+
+Q) Class & Interfaces
+
+Creating variable to bind form: Class
+Creating a variable to hold array: Interface
+
+https://www.youtube.com/watch?v=qMPFtq_DPck
+
+
+Q) Reference for angular table and others
+https://github.com/williamvn/UserManagement
