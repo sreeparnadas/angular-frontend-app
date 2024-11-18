@@ -8,12 +8,16 @@ import { IStudent } from '../models/interface/IStudent';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialog } from '@angular/material/dialog';
+import { FormDialogComponent } from './form-dialog/form-dialog.component';
 
 
 @Component({
   selector: 'app-student-details',
   standalone: true,
-  imports: [CommonModule,MatTableModule, MatSortModule, MatPaginatorModule, MatIconModule, MatButtonModule, MatGridListModule],
+  imports: [CommonModule,MatTableModule, MatSortModule, MatPaginatorModule, MatIconModule, MatButtonModule, MatGridListModule, MatCardModule, MatFormFieldModule],
   templateUrl: './student-details.component.html',
   styleUrl: './student-details.component.css'
 })
@@ -35,7 +39,7 @@ export class StudentDetailsComponent  implements AfterViewInit{
     this.dataSource.sort = this.sort;
   }
 
-  constructor(){
+  constructor(private dialog: MatDialog){
     //using callback function
     // this.studentService.get().subscribe((data:any) => {
     //   this.studentList = data;
@@ -52,6 +56,18 @@ export class StudentDetailsComponent  implements AfterViewInit{
       error: (err) => {
         console.log(err);
       }
+    })
+  }
+
+  openPopup(){
+    var windowPopup = this.dialog.open(FormDialogComponent, {
+      width: '60%',
+      data: {
+        title: 'Add Student'
+      }
+    })
+    windowPopup.afterClosed().subscribe(item=>{
+      console.log(item);
     })
   }
 }

@@ -1,0 +1,26 @@
+<mat-toolbar class="mat-elevation-z3">
+    <button mat-icon-button (click)="collapsed.set(!collapsed())">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <h3><b>CODER</b></h3>
+
+    <span class="spacer"></span>
+
+     <p-toast />
+    <p-confirmPopup />
+    <p-button 
+        (click)="logout($event)" 
+        label="Logout" 
+        [outlined]="true" />
+
+    <!-- <button mat-mini-fab style="background-color: coral;" (click)="logout()">Logout</button> -->
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav opened mode="side" [style.width]="sideNavWidth()" [style.border]="'5px solid black'">
+        <app-custom-sidenav [collapsed]="collapsed()"></app-custom-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content class="content" [style.margin-left]="sideNavWidth()">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

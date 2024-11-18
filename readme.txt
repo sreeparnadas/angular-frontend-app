@@ -40,3 +40,42 @@ https://www.youtube.com/watch?v=qMPFtq_DPck
 
 Q) Reference for angular table and others
 https://github.com/williamvn/UserManagement
+
+
+Q) Angular ViewChild() decorator
+https://youtu.be/tPYGJM1-qkk?feature=shared
+
+
+Q) How to create grid?
+
+<mat-grid-list cols="4" rowHeight="25px" style="padding-bottom: 4px;">
+  <mat-grid-tile colspan="3" rowspan="1">
+    <h2>Student List</h2>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1" rowspan="1">
+    <mat-icon>person_add</mat-icon>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+
+Q) Angular material flex layout
+https://tburleson-layouts-demos.firebaseapp.com/#/docs
+
+
+Q) CommonModule:
+
+Exports all the basic Angular directives and pipes, such as NgIf, NgForOf, DecimalPipe, and so on. Re-exported by BrowserModule, which is included automatically in the root AppModule when you create a new app with the CLI new command.
+
+
+Q) provideHttpClient() add it into appConfig
+
+Q) https://github.com/primefaces/primeng/issues/14028#issuecomment-2267318272
+p-toast error
+
+
+Q) prime ng
+https://primeng.org/confirmpopup
+
+Q) Auth guard => ng g g auth
+guard(CanActivate, CanActivateChild, CanDeactivate, CanMatch)

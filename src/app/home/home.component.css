@@ -1,0 +1,97 @@
+.row1 > *{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(171, 252, 235);
+}
+/* [ >: The child combinator selects direct children of the preceding element. ] */
+
+.row1 {
+    border: 2px dotted #ff4b2f;
+    display: flex;
+}
+
+.row2 > * {
+    border: 2px solid black
+}
+.row2 {
+    border: 3px dotted blueviolet;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.row3 > * {
+    border: 2px solid black;
+    background-color: rgb(240, 157, 99);
+    width: 200px;
+}
+
+.row3 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    /* flex-flow: row wrap; 
+    */  /*You can combine the two properties flex-direction and flex-wrap into the flex-flow shorthand*/
+}
+
+.row4 > * {
+    border: 2px solid black;
+    background-color: rgb(232 245 238);
+}
+
+.row4 {
+    display: flex;
+}
+.row4 .one {
+    flex: 1 1 auto;
+    text-align: center;
+    font-size: large;
+}
+.spacer{
+    flex: 1 1 auto;
+}
+.flexcontainer {
+    margin: 5px;
+    padding: 25px;
+    background-color: rgb(2 173 173 / 86%);
+    border-radius: 25px;
+}
+.header{
+    background-color: #feb;
+    display: flex;
+    margin-top: 25px;
+    border-radius: 5px;
+    justify-content: center;
+}
+.middle > * {
+    border: 2px solid black;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+.middle {
+    background-color: lightgray;
+    display: flex;
+    height: 400px;
+}
+.middle .left{
+    flex: 1 1 auto;
+    background-color: #d6dce7;
+}
+.middle .center{
+    flex: 3 1 auto;
+    background-color: #93788f;
+}
+.middle .right{
+    flex: 1 1 auto;
+    background-color: #031638;
+}
+
+.footer{
+    background-color: rgb(235, 235, 132);
+    display: flex;
+    border-radius: 5px;
+}
+
+.main{
+    background-color: lightgray;
+}

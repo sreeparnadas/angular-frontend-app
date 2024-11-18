@@ -9,12 +9,6 @@ mat-sidenav-container {
     height: calc(100vh - 64px);
 }
 
-/* .spacer{
+.spacer{
     flex: 1 1 auto;
-} */
-
-#institute-name{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    text-shadow: 2px 2px #62e4ff;
 }

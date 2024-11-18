@@ -16,6 +16,10 @@ export class StudentDetailsService {
     return this.http.get<any>(this.apiUrl).pipe(catchError(this.handleError))
   }
 
+  edit(){
+    
+  }
+
   private handleError(error:any){
    return throwError(() => new Error("Something went wrong"));
   }
