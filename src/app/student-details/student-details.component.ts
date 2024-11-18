@@ -12,12 +12,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialog } from '@angular/material/dialog';
 import { FormDialogComponent } from './form-dialog/form-dialog.component';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 @Component({
   selector: 'app-student-details',
   standalone: true,
-  imports: [CommonModule,MatTableModule, MatSortModule, MatPaginatorModule, MatIconModule, MatButtonModule, MatGridListModule, MatCardModule, MatFormFieldModule],
+  imports: [CommonModule,MatTableModule, MatSortModule, MatPaginatorModule, MatIconModule, MatButtonModule, MatGridListModule, MatCardModule, MatFormFieldModule, MatBadgeModule],
   templateUrl: './student-details.component.html',
   styleUrl: './student-details.component.css'
 })
@@ -28,6 +29,12 @@ export class StudentDetailsComponent  implements AfterViewInit{
   dataSource = new MatTableDataSource<IStudent>(this.studentList);
   studentService = inject(StudentDetailsService);
   columnHeaders: string[] = ['Id', 'First Name', 'Last Name', 'Email', 'Action'];
+
+  totalStudents = new Promise((resolve, rejection) => {
+    setTimeout(() => {
+      resolve(this.studentList.length)
+    },2000)
+  })
 
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;

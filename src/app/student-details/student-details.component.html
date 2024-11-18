@@ -2,7 +2,10 @@
   <mat-card-header>
     
     <mat-card-title>Student List</mat-card-title>
-    <button mat-icon-button style="margin-left: 80%;" color="primary" (click)="openPopup()"><mat-icon>person_add</mat-icon></button>
+
+    <button mat-raised-button style="margin-left: 80%;" (click)="openPopup()" matBadge="{{totalStudents | async}}" matBadgePosition="before">
+      <mat-icon>person_add</mat-icon>
+    </button>
 
   </mat-card-header>
   <mat-card-content>
